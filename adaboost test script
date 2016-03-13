@@ -1,0 +1,8 @@
+trainsize =200;
+testsize = 100;
+num_iter = 20;
+
+[train.X, train.y] = gen_sample(trainsize);
+[test.X, test.y] = gen_sample(testsize);
+
+[ predicted ,errmat, errtrain] = adaboost(train.X, train.y, test.X,test.y, num_iter);
